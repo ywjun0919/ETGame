@@ -290,6 +290,13 @@
     <Compile Include="Assets\Model\Module\Demo\UnitComponent.cs" />
     <Compile Include="Assets\Model\Module\Demo\UnitFactory.cs" />
     <Compile Include="Assets\Model\Module\Demo\UnitPathComponent.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\FUI.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\FUIComponent.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\FUIHelper.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\FUIPackageComponent.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\FUIStackComponent.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\FUIWindowComponent.cs" />
+    <Compile Include="Assets\Model\Module\FairyGUI\GWindow.cs" />
     <Compile Include="Assets\Model\Module\Filter\FilterAttribute.cs" />
     <Compile Include="Assets\Model\Module\Filter\FilterComponent.cs" />
     <Compile Include="Assets\Model\Module\Filter\FilterEntity.cs" />

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package ETModel;
+
+message UnitConfigCollection
+{
+	repeated UnitConfig Configs = 1;
+}
+
+message UnitConfig
+{
+	int32 id = 1;
+	string Name = 3;
+	string Desc = 4;
+	int32 Position = 5;
+	int32 Height = 6;
+	int32 Weight = 7;
+}

@@ -37,6 +37,10 @@ namespace ETModel
 				Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
 				Game.Scene.AddComponent<ConfigComponent>();
 				Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
+
+				// 加载完配置，开启protobuf对象池功能，让消息0GC
+				MessagePool.Instance.Enable = true;
+				
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 

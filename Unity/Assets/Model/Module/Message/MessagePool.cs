@@ -1,7 +1,5 @@
 ﻿using System;
-#if !SERVER
-using System.Collections.Generic;		
-#endif
+using System.Collections.Generic;
 
 namespace ETModel
 {
@@ -10,13 +8,17 @@ namespace ETModel
 	{
 		public static MessagePool Instance { get; } = new MessagePool();
 
-#if !SERVER
+		public bool Enable { get; set; }
+
 		private readonly Dictionary<Type, Queue<object>> dictionary = new Dictionary<Type, Queue<object>>();
-#endif
 
 		public object Fetch(Type type)
 		{
-#if !SERVER
+			if (!this.Enable)
+			{
+				return Activator.CreateInstance(type);
+			}
+			
 			Queue<object> queue;
 			if (!this.dictionary.TryGetValue(type, out queue))
 			{
@@ -35,9 +37,6 @@ namespace ETModel
 			}
 
 			return obj;
-#else
-			return Activator.CreateInstance(type);
-#endif
 		}
 
 		public T Fetch<T>() where T : class
@@ -48,7 +47,11 @@ namespace ETModel
 
 		public void Recycle(object obj)
 		{
-#if !SERVER
+			if (!this.Enable)
+			{
+				return;
+			}
+			
 			Type type = obj.GetType();
 			Queue<object> queue;
 			if (!this.dictionary.TryGetValue(type, out queue))
@@ -58,7 +61,6 @@ namespace ETModel
 			}
 
 			queue.Enqueue(obj);
-#endif
 		}
 	}
 }

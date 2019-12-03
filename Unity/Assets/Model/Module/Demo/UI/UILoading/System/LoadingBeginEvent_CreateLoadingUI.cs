@@ -7,8 +7,8 @@ namespace ETModel
     {
         public override void Run(Entity domain)
         {
-            UI ui = UILoadingFactory.Create(domain);
-			Game.Scene.GetComponent<UIComponent>().Add(ui);
+            //UI ui = UILoadingFactory.Create(domain);
+			//Game.Scene.GetComponent<UIComponent>().Add(ui);
         }
     }
 }

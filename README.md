@@ -190,8 +190,5 @@ __讨论QQ群 : 474643097__
 5.优化了代码，3.0的代码更加清晰，结构更加合理，前后端代码几乎一模一样了  
 
 
-# 支付宝捐赠  
-![使用支付宝对该项目进行捐赠](https://github.com/egametang/ET/blob/master/Book/donate.png)
-
 # 友情链接  
 [xasset](https://github.com/xasset/xasset) 致力于为 Unity 项目提供了一套 精简稳健 的资源管理环境  
